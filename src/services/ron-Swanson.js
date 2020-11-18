@@ -8,7 +8,7 @@ export default class RonSwan {
         return response.json();
       })
       .catch(function(error){
-        return Error(error)
-      })
+        return Error(error);
+      });
   }
 }
