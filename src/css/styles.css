@@ -1,0 +1,6 @@
+body {
+  background-image: url("./../assets/img/background.jpg");
+  background-position: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
