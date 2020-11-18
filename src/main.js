@@ -2,14 +2,19 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import RonSwan from './services/ron-Swanson.js';
+import { RonSwan } from './services/ron-Swanson.js';
 
-$("#ronQuote").submit(function(event) {
+$("#ronQuote").submit(function (event) {
   event.preventDefault();
   RonSwan.getQuote()
-  .then(function(response) {
-    $("#quoteReturn").text(response);
-  });
+    .then(function (response) {
+      $("#quoteReturn").text(response);
+    });
+  RonSwan.getGif()
+    .then(function (gifResponse) {
+      console.log(gifResponse);
+      $('.output').append(`<a href='${gifResponse.data.url}'><img src=${gifResponse.data.images.original.url} id='gif${gifResponse.data.title}'></a>`);
+    });
 });
 
 // DinoIpsum.getIpsum()
