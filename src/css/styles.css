@@ -3,4 +3,27 @@ body {
   background-position: auto;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+.info {
+  background-image: url("https://media.giphy.com/media/d7qFTitBNU9kk/giphy.gif");
+  background-position: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1%;
+  height: 630px;
+  border: 5px solid black;
+  margin-top: 2%;
+  margin-right: 15%;
+  margin-left: 15%;
+  position: relative;
+}
+
+#quote {
+  font-size: 3em;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
 }
