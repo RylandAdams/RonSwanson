@@ -16,7 +16,7 @@ $("#ronQuote").submit(function (event) {
       console.log(gifResponse);
       $('.output').append(`<a href='${gifResponse.data.url}'><img src=${gifResponse.data.images.original.url} id='gif${gifResponse.data.title}'></a>`);
     });
-    $('.output').fadeIn();
+  $('.output').fadeIn();
 });
 
 // DinoIpsum.getIpsum()

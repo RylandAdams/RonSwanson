@@ -53,6 +53,7 @@
 - jQuery
 - Javascript
 - Node.js
+- https://gist.github.com/ijmacdowell/8325491#file-adjectives-js - for array of verbs/adjectives/nouns
 
 ## Legal 
 * _This software is licensed under the [MIT] license_
