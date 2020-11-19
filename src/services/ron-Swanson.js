@@ -31,6 +31,49 @@ export class RonSwan {
         return Error(error);
       });
   }
+
+  static async getSearchGif(word) {
+    console.log("GIF SEARCH " + word);
+    return fetch(`http://api.giphy.com/v1/gifs/search?q="${word}"&api_key=${process.env.API_KEY}`)
+      .then(function(response) {
+        console.log(response.json());
+        if (!response.ok) {
+          throw Error(response.status);
+        }
+        console.log("GIF RETURN");
+        return response.json();
+      })
+      .catch(function(error){
+        return Error(error);
+      });
+  }
+
+  checkWord(sentence) {
+    console.log(sentence);
+    let chopQuote = [];
+    chopQuote = sentence.toString().split(" ");
+    console.log(chopQuote);
+    for (let i = 0; i < chopQuote.length; i++) {
+      if (this.nouns.includes(chopQuote[i])) {
+        console.log("1");
+        return chopQuote[i];
+      }
+    }
+    console.log("2");
+    for (let i = 0; i < chopQuote.length; i++) {
+      if (this.verbs.includes(chopQuote[i])) {
+        console.log("3");
+        return chopQuote[i];
+      }
+    }
+    console.log("4");
+    for (let i = 0; i < chopQuote.length; i++) {
+      if (this.adjectives.includes(chopQuote[i])) {
+        console.log("5");
+        return chopQuote[i];
+      }
+    }
+  }
 }
 
   

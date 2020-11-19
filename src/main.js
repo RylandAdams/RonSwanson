@@ -7,9 +7,16 @@ import { RonSwan } from './services/ron-Swanson.js';
 $("#ronQuote").submit(function (event) {
   event.preventDefault();
   $(".output").html('');
+  let ron = new RonSwan;
   RonSwan.getQuote()
     .then(function (response) {
       $(".output").append(`<h1>${response}</h1>`);
+      let wordResponse = ron.checkWord(response[0]);
+      RonSwan.getSearchGif(wordResponse)
+        .then(function (searchResponse) {
+          console.log(searchResponse);
+          $('.output').append(`<a href='${searchResponse.PromiseResult.data[0].url}'><img src=${searchResponse.PromiseResult.data[0].url} id='gif${searchResponse.PromiseResult.data[0].title}'></a>`);
+        });
     });
   RonSwan.getGif()
     .then(function (gifResponse) {
