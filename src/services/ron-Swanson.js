@@ -13,7 +13,7 @@ export class RonSwan {
   }
   
   static async getGif() {
-    return fetch(`http://api.giphy.com/v1/gifs/random?tag="ron swanson"&api_key=dDoXTOSV188zGNcFEVZCNTfU5W9eDVcU`)
+    return fetch(`http://api.giphy.com/v1/gifs/random?tag="ron swanson"&api_key=${process.env.API_KEY}`)
       .then(function(response) {
         if (!response.ok) {
           throw Error(response.status);

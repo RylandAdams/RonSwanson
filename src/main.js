@@ -6,15 +6,17 @@ import { RonSwan } from './services/ron-Swanson.js';
 
 $("#ronQuote").submit(function (event) {
   event.preventDefault();
+  $(".output").html('');
   RonSwan.getQuote()
     .then(function (response) {
-      $("#quoteReturn").text(response);
+      $(".output").append(`<h1>${response}</h1>`);
     });
   RonSwan.getGif()
     .then(function (gifResponse) {
       console.log(gifResponse);
       $('.output').append(`<a href='${gifResponse.data.url}'><img src=${gifResponse.data.images.original.url} id='gif${gifResponse.data.title}'></a>`);
     });
+    $('.output').fadeIn();
 });
 
 // DinoIpsum.getIpsum()

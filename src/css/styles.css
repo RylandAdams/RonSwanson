@@ -12,25 +12,40 @@ body {
   background-position: auto;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1%;
+  /*padding: 1%;*/
+  padding-top: 1%;
   height: 630px;
   border: 5px solid black;
   margin-top: 2%;
   margin-right: 15%;
   margin-left: 15%;
   position: relative;
+  border-left: 10px solid silver;
 }
 
 #quote {
-  font-size: 3em;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 15px;
+  color: black;
+  border: 3px solid red;
+  border-left: 3px solid silver;
+  font-weight: 700;
+  background-image: url("./../assets/img/flag.jpg");
+  background-position: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 2em;
+  height: 115px;
+  width: 220px;
+  padding-top: 6%;
+/* position: absolute;
+  bottom: 0;*/
+  margin-top: 1%;
+  margin-right: 90%
 }
 
 .output {
+  display: none;
   background-image: url("./../assets/img/shotgun.jpg");
-  height: 370px;
+  height: auto;
   width: 1590px;
   border: 5px solid black;
   margin-top: 2%;
@@ -41,4 +56,9 @@ body {
   text-align: center;
   position: center;
   font-size: 4em;
+  padding-bottom: 1%;
+}
+
+img {
+  border: 5px solid black;
 }
