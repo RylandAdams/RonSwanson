@@ -47,7 +47,7 @@
 
 - Visual Studio Code
 - HTML
-- Markdowne
+- Markdown
 - Bootstrap
 - Css
 - jQuery
